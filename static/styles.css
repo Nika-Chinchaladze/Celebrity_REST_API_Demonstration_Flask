@@ -1,0 +1,282 @@
+/* GENERAL STYLING */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Poppins";
+	background-color: #E4C988;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+/* NAVIGATION BAR SECTION */
+.mainHeaderDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items-center;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    background-color: #C27664;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.mainHeaderDiv h1 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0A2647;
+}
+.linkDiv {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.linkDiv a {
+    text-decoration: none;
+    color: #0A2647;
+    font-size: 17px;
+    font-weight: bold;
+}
+.linkDiv a:hover {
+    color: azure;
+}
+
+/* CONCRETE STYLING */
+.mainDiv {
+	width: 40%;
+	height: 400px;
+	background-color: #FFCEFE;
+	margin: auto;
+	margin-top: 80px;
+	margin-bottom: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	border: 2px solid azure;
+}
+
+/*LEFT SECTION*/
+.leftDiv {
+	width: 40%;
+	height: 100%;
+	background-color: #F48484;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	box-sizing: border-box;
+	position: relative;
+}
+.headID {
+	font-size: 1.5rem;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	color: #0A2647;
+}
+.imgDiv {
+	width: 90%;
+	height: 70%;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	border-radius: 15px;
+}
+.followers {
+	font-weight: bold;
+	color: #0A2647;
+	width: 70%;
+	position: absolute;
+	left: 15%;
+	bottom: 40px;
+}
+.followers-quantity {
+	font-weight: bold;
+	color: #0A2647;
+	width: 60%;
+	position: absolute;
+	left: 20%;
+	bottom: 10px;
+}
+
+/*RIGHT SECTION*/
+.rightDiv {
+	box-sizing: border-box;
+	width: 60%;
+	height: 100%;
+	position: relative;
+}
+.celebrityName {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 28px;
+}
+.threeInput {
+    position: absolute;
+    top: 80px;
+}
+.additionalInfo {
+	text-align: left;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.extraInfo {
+	box-sizing: border-box;
+	padding: 0 10px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	text-align: justify;
+	font-size: 1.5rem;
+}
+
+/* BUTTONS SUB-SECTION */
+.buttonsDiv {
+	box-sizing: border-box;
+	padding: 0 10px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	bottom: 15px;
+}
+.myButton {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	padding: 5px 20px;
+	border: none;
+	box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+	border-radius: 50px;
+	transition : 1000ms;
+	transform: translateY(0);
+}
+.myButton:hover {
+	transition : 1000ms;
+	transform : translateY(-5px);
+	color: #ffffff;
+	border: none;
+}
+.updateButton {
+	background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+}
+.changeButton {
+	background: linear-gradient(90deg, #099721 0%, #c500cc 100%);
+}
+.deleteButton {
+	background: linear-gradient(90deg, red 0%, #c500cc 100%);
+}
+
+/* CSS FOR SEARCH HTML */
+.formDiv {
+    box-sizing: border-box;
+    width: 60%;
+    margin: auto;
+    margin-top: 90px;
+    text-align: left;
+}
+.formDiv .control-label {
+    font-size: 20px;
+}
+.formDiv .form-control {
+    height: 46px;
+    font-size: 17px;
+}
+.formDiv .form-group {
+    margin-bottom: 30px;
+}
+
+#submit {
+    width: 40%;
+    position: relative;
+    left: 30%;
+    font-size: 18px;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color: #599bb3;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 13px 32px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #3d768a;
+}
+#submit:hover {
+	background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color: #408c99;
+}
+#submit:active {
+	top: 2px;
+}
+
+/* CSS FOR ADD HTML */
+.addDiv {
+    box-sizing: border-box;
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+.addDiv .control-label {
+    font-size: 16px;
+    color: #153462;
+}
+.addDiv .form-control {
+    height: 34px;
+    font-size: 15px;
+}
+.addDiv .form-group {
+    margin-bottom: 15px;
+}
+
+/* CSS FOR CHANGE HTML */
+.changeDiv {
+    box-sizing: border-box;
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+.changeDiv .control-label {
+    font-size: 16px;
+    color: #224B0C;
+}
+.changeDiv .form-control {
+    height: 34px;
+    font-size: 15px;
+}
+.changeDiv .form-group {
+    margin-bottom: 15px;
+}
+
+/* CSS FOR UPDATE HTML */
+.updateDiv {
+    box-sizing: border-box;
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: left;
+}
+.updateDiv .control-label {
+    font-size: 20px;
+    color: #400E32;
+}
+.updateDiv .form-control {
+    height: 40px;
+    font-size: 15px;
+}
+.updateDiv .form-group {
+    margin-bottom: 15px;
+}
+.updateDiv .form-group:nth-of-type(2) {
+    margin-bottom: 50px;
+}
