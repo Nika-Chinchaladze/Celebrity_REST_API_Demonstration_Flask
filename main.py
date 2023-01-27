@@ -2,9 +2,10 @@ from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap
 from form_class import QuickForm, AddForm, ChangeForm, UpdateForm
 from api_class import CelebrityApi
+import os
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "TommyShelby"
+app.config["SECRET_KEY"] = os.environ.get("MY_SECRET_KEY")
 Bootstrap(app)
 
 
