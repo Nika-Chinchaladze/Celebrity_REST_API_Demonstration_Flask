@@ -1,5 +1,5 @@
 # Celebrity REST API Demonstration
-<p>Flask Web Application uses Celebrity REST API - created by me - To comunicate with Celebrities' Database and execute different Requests:</p>
+<p>Flask Web Application uses Celebrity REST API - created by me - To communicate with Celebrities' Database and execute different Requests:</p>
 <p>&nbsp;&nbsp;- GET All Celebrities.</p>
 <p>&nbsp;&nbsp;- GET Random Celebrity.</p>
 <p>&nbsp;&nbsp;- GET Search - Filter Down Celebrities by name, surname, gender, age, movie types and followers quantity.</p>
@@ -9,9 +9,9 @@
 <p>&nbsp;&nbsp;- DELETE remove Celebrity from Database.</p>
 <p>For -> PATCH, PUT and DELETE requests User needs to provide API KEY</p>
 
-<p><a href="">Watch Video On My Youtube Channel</a></p>
-<p><a href="">Check Celebrity REST API online</a></p>
-<p><a href="">Check Source Code of Celebrity REST API</a></p>
+<p><a href="https://www.youtube.com/watch?v=CqfX6sw0xfM">Watch Video On My Youtube Channel</a></p>
+<p><a href="http://peackyblinder.pythonanywhere.com/all">Check Celebrity REST API online</a></p>
+<p><a href="https://github.com/Nika-Chinchaladze/Celebrity_REST_API_Flask">Check Source Code of Celebrity REST API</a></p>
 
 # App
 ![first](https://user-images.githubusercontent.com/106172218/215216512-4928e5c7-053e-4b22-add7-fbc53455c3a2.jpg)
