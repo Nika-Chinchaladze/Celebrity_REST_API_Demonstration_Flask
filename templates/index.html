@@ -1,0 +1,62 @@
+{% extends "bootstrap/base.html" %}
+<!--MY OWN STYLE-->
+{% block styles %}
+    {{ super() }}
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+<!--TITLE SECTION-->
+{% block title %}Home Page{% endblock %}
+
+<!--CONTENT SECTION-->
+{% block content %}
+<!--Navigation Bar Section-->
+<div class="mainHeaderDiv">
+	<div>
+		<h1>Celebrity API</h1>
+	</div>
+	<div class="linkDiv">
+		<a href="{{ url_for('home_page') }}">All</a>
+		<a href="{{ url_for('random_page') }}">Random</a>
+		<a href="{{ url_for('search_page') }}">Search</a>
+		<a href="{{ url_for('add_page') }}">Add</a>
+	</div>
+</div>
+<!-- This Part Of Code Will Be Auto Generated-->
+	{% for celebrity in celebrity_list: %}
+		<!-- my card element -->
+		<div class="mainDiv">
+			<!-- image section -->
+			<div class="leftDiv">
+				<h2 class="headID">ID {{ celebrity.id }}</h2>
+				<div class="imgDiv" style="background-image: url('{{ celebrity.img_url }}');"></div>
+				<h3 class="followers">Followers</h3>
+				<h3 class="followers-quantity">{{ celebrity.followers }}</h3>
+			</div>
+			<!-- information section -->
+			<div class="rightDiv">
+				<h1 class="celebrityName">{{ celebrity.first_name }} {{ celebrity.last_name }}</h1>
+				<div class="threeInput">
+					<h4 class="additionalInfo">Age: {{ celebrity.age }}</h4>
+					<h4 class="additionalInfo">Gender: {{ celebrity.gender }}</h4>
+					<h4 class="additionalInfo">Movie Genre: {{ celebrity.movie_genre }}</h4>
+					<p class="extraInfo">
+						It is a long-established fact that a reader will be distracted by the readable content of a
+						page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+						normal distribution of letters.
+					</p>
+				</div>
+				<!-- buttons div -->
+				<div class="buttonsDiv">
+					<a class="updateButton myButton" href="{{ url_for('update_page', id=celebrity.id) }}">Update</a>
+					<a class="changeButton myButton" href="{{ url_for('change_page', id=celebrity.id) }}">Change</a>
+					<a class="deleteButton myButton" href="{{ url_for('delete_page', id=celebrity.id) }}">Delete</a>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<!--MY OWN STYLE-->
+{% block styles %}
+    {{ super() }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+<!--TITLE SECTION-->
+{% block title %}Change Page{% endblock %}
+
+<!--CONTENT SECTION-->
+{% block content %}
+<!--Navigation Bar Section-->
+<div class="mainHeaderDiv">
+	<div>
+		<h1>Celebrity API</h1>
+	</div>
+	<div class="linkDiv">
+		<a href="{{ url_for('home_page') }}">All</a>
+		<a href="{{ url_for('random_page') }}">Random</a>
+		<a href="{{ url_for('search_page') }}">Search</a>
+		<a href="{{ url_for('add_page') }}">Add</a>
+	</div>
+</div>
+
+<!-- Here Quick Form Will Be Generated-->
+<div class="changeDiv">
+    {{ wtf.quick_form(form, novalidate=True) }}
+</div>
+
+{% endblock %}
