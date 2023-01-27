@@ -1,11 +1,12 @@
 import requests
 from random import choice
+import os
 
 
 class CelebrityApi:
     def __init__(self):
         self.my_api = "http://peackyblinder.pythonanywhere.com/"
-        self.my_key = "TommyShelby"
+        self.my_key = os.environ.get("MY_API_KEY")
 
     def get_all(self):
         respond = requests.get(url=f"{self.my_api}all")
